@@ -34,7 +34,7 @@
 
 		
 
-		<logger name="com.qshuoo.demo" level="debug"/>
+		<logger name="com.qshuoo" level="debug"/>
 
 
 		<root level="info">

@@ -1,8 +1,7 @@
-package com.qshuoo.demo;
+package com.qshuoo.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -18,12 +17,19 @@ public class ControllerDemo {
 	
 	private static final Logger logger = LoggerFactory.getLogger(ControllerDemo.class); 
 	
+	
 	@RequestMapping("/")
 	public String index(ModelMap map) {
-		logger.info("this is logger");
+		logger.info("test freemarker");
 		map.put("title", "index");
-		map.put("contant", "Hello,This is FreeMarker");
+		map.put("contant", "Hello World");
 		return "index";
+	}
+	
+	@RequestMapping("/exception")
+	public String testRunningException() {
+		logger.info("test RunningException");
+		throw new RuntimeException("Running Exception");
 	}
 	
 	@ResponseBody
@@ -35,7 +41,4 @@ public class ControllerDemo {
 		return user;
 	}
 	
-	public static void main(String[] args) {
-		SpringApplication.run(ControllerDemo.class, args);
-	}
 }
