@@ -32,6 +32,12 @@ public class ControllerDemo {
 		throw new RuntimeException("Running Exception");
 	}
 	
+	@RequestMapping("/exception02")
+	public void testException() throws Exception {
+		throw new Exception("Exception happend");
+	}
+	
+	
 	@ResponseBody
 	@RequestMapping("/user")
 	public User toJson() {
