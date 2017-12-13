@@ -7,20 +7,30 @@ package com.qshuoo.pojo;
  *
  */
 public class User {
-	private int id; //编号
-	private String name; //姓名
-	public int getId() {
+	
+	private Integer id; //编号
+	private String username; //姓名
+	private String password; //密码
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+	public String getUsername() {
+		return username;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 	
+	
+		
 }

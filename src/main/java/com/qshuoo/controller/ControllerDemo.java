@@ -43,7 +43,7 @@ public class ControllerDemo {
 	public User toJson() {
 		User user = new User();
 		user.setId(10086);
-		user.setName("狗化名");
+		user.setUsername("狗化名");
 		return user;
 	}
 	
